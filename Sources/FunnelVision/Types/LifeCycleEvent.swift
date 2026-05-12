@@ -17,4 +17,8 @@ public extension Analytics {
     func track(_ event: LifeCycleEvent) {
         track(event: event)
     }
+    
+    static func track(_ event: LifeCycleEvent) {
+        track(event: event)
+    }
 }
