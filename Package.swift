@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "FunnelVision",
 	 platforms: [
-				 .macOS(.v15),
+				 .macOS(.v14),
 				 .iOS(.v17),
 				 .watchOS(.v7),
 				 .visionOS(.v1),
