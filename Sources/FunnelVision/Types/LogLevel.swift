@@ -7,8 +7,6 @@
 
 import Foundation
 
-public protocol AnalyticsEvent: RawRepresentable where RawValue == String {
-    
+public enum LogLevel: Int, Sendable {
+	case trace, debug, info, warn, error, fatal
 }
-
-
