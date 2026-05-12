@@ -8,8 +8,12 @@
 import SwiftUI
 import FunnelVision
 
-extension Analytics.Event {
-    #AnalyticsEvent("didStartup")
+enum LifeCycleEvent: String, AnalyticsEvent {
+    case didStartUp
+}
+
+extension Analytics {
+    static func track(_ event: LifeCycleEvent) { self.track(event: event) }
 }
 
 struct ContentView: View {
@@ -20,7 +24,7 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
                 .onAppear {
-                    Analytics.track(.didStartup)
+                    Analytics.track(.didStartUp)
                 }
         }
         .padding()

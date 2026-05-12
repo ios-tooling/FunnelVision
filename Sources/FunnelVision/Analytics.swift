@@ -17,7 +17,7 @@ public actor Analytics {
         
     }
     
-    public static nonisolated func track(_ event: Event, meta: [String: String]? = nil) {
+    public static nonisolated func track(event: AnalyticsEvent, meta: [String: String]? = nil) {
         
     }
 }
